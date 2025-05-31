@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom two</title>
+</head>
+<body>
+    
+</body>
+<script>
+  const newEle =   document.createElement('div')
+  console.log(newEle);
+  newEle.className = "container"
+  newEle.id = Math.round(Math.random() * 10 +1)
+  newEle.setAttribute('title', "genrated title")
+  newEle.style.backgroundColor = "green"
+  newEle.style.padding = "20px"
+//   newEle.innerText = "Meenakshi Bahti"
+ const newText =  document.createTextNode("Meenakshi bhati")
+ newEle.appendChild(newText)
+ document.body.appendChild(newEle)
+</script>
+</html>

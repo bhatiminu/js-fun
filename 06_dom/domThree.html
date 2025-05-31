@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>
+            javascript
+        </li>
+    </ul>
+</body>
+<script>
+    function addLang(lang) {
+   const li = document.createElement('li')
+   li.innerHTML = `${lang}`
+   document.querySelector('.language').appendChild(li)
+    }
+addLang("java")
+addLang("cpp")
+addLang("typescript")
+
+  function addOptLang(lang) {
+   const li = document.createElement('li')
+   li.appendChild(document.createTextNode(lang))
+   document.querySelector('.language').appendChild(li)
+    }
+    addOptLang("React")
+
+    //Edit item
+    const secEle = document.querySelector('li:nth-child(2)')
+    // secEle.innerHTML = "Minu"
+    const newLi = document.createElement("li")
+    newLi.textContent = "Bhati"
+    secEle.replaceWith(newLi)
+
+    //Edit
+    const fEle = document.querySelector('li:first-child')
+    fEle.outerHTML = "<li>Node</li>"
+    // const newFEle = document.createElement("li")
+    // newFEle.textContent = "ReactNative"
+    // fEle.replaceWith(newFEle)
+
+    //Remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+
+</html>
