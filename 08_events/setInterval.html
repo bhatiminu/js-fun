@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval</title>
+</head>
+<body>
+    <body>
+    <h1></h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let count = 0;
+    const setintervalName = function() {
+        count++;
+    document.querySelector('h1').innerHTML = `my name is minu (${count})`
+    }
+  let refset =   setInterval(setintervalName ,1000)
+  document.querySelector('#stop').addEventListener('click', function() {
+    clearInterval(refset)
+    console.log(count,'stoped');
+  })
+    document.querySelector('#start').addEventListener('click', function() {
+   clearInterval(refset);
+    refset = setInterval(setintervalName, 1000);
+    console.log('started again');
+  })
+</script>
+</body>
+</html>

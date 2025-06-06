@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time out</title>
+</head>
+<body>
+    <h1>My name is meenakshi</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const setNameNew = function() {
+      document.querySelector('h1').innerHTML = "my name is minu"
+    }
+    const changeMe = setTimeout(setNameNew,2000)
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeMe)
+        console.log("stoped");
+    })
+</script>
+</html>
